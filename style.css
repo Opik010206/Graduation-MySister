@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+.pembungkus{
+    overflow: hidden;
+}
+
+/* Header-------------------------- */
+
+header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(images/game.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    display: flex;
+    flex-direction: column;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+
+
+/* Navbar--------------------------------- */
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    position: relative;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+nav .logo{
+    font-size: 2rem;
+}
+
+nav .whatsapp{
+    padding: .7rem 2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: .3s;
+    background-color: black;
+}
+
+nav .whatsapp:hover{
+    background-color: white;
+    color: black;
+}
+
+/* Header Title */
+.header-title{
+    margin: auto auto;
+    position: relative;
+    font-size: 5rem;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Header Bottom--------------------------- */
+.header-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    position: relative;
+}
+
+.date{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.date span{
+    font-size: 1rem;
+}
+
+.date, .sosmed{
+    opacity: 0;
+    animation: animate 3.5s both;
+}
+
+@keyframes animate {
+    100%{
+        opacity: 1;
+    }
+}
+
+.sosmed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sosmed li{
+    margin: 0 10px;
+    list-style: none;
+}
+
+.sosmed li a{
+    color: white;
+    text-decoration: none;
+}
+
+
+/* About------------------------------------------- */
+main{
+    width: 100%;
+    padding: 2.5rem 0;
+}
+
+.container{
+    width: 900px;
+    margin: auto auto;
+}
+
+.img-galery{
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    margin-bottom: 2.5rem;
+}
+
+.img-galery .img-box{
+    overflow: hidden;
+    position: relative;
+    margin: 0 10px;
+    width: 22%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-galery .img-box img:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+
+.img-galery .img-box h3{
+    position: absolute;
+    opacity: 0;
+    transition: .3s;
+}
+
+.img-galery .img-box:hover h3{
+    opacity: 1;
+    z-index: 3;
+}
+
+.img-galery .img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.img-galery .img-box:nth-child(odd){
+    align-self: flex-end;
+}
+
+.desc{
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 950px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .img-galery{
+        flex-direction: column;
+        margin-bottom: 1rem;
+        height: max-content;
+    }
+    .img-galery .img-box{
+        width: 100%;
+        height: 400px;
+        margin: 1rem;
+        align-self: center;
+    }
+    .img-galery .img-box:nth-child(odd){
+        align-self: center;
+    }
+    .header-title{
+        font-size: 3rem;
+    }
+}
+
+/* Footer------------------------------- */
+
+footer{
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+footer i{
+    color: aqua;
+}
+
